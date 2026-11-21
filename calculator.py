@@ -1,14 +1,11 @@
 def main():
-    x = get_int("What's x? ")
-    print(f"x is {x}")
+    x = int(input("What's x? "))
+    print("x squared is", square(x))
 
 
-def get_int(prompt):
-    while True:
-        try:
-            return int(input(prompt))
-        except ValueError:
-            pass
+def square(n):
+    return n * n
 
 
-main()
+if __name__ == "__main__":
+    main()
